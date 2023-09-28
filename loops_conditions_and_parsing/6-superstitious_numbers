@@ -1,4 +1,4 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 #Displaying numbers from 1 to 20 using the while loop and case statement
 
 i=1
