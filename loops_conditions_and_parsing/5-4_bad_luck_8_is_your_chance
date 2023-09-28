@@ -3,18 +3,19 @@
 #displays good luck for the 8th loop iteration
 #displays Best School for the other iterations
 
-count=0
+i=1
 
-while [ $count -lt 10 ]
+while [ "$i" -le 10 ]
 do
- if [ count -eq ]
+ if [ "$i" -eq 4 ]
  then
    echo "bad luck"
- elif [ $count -eq 7 ]
+ elif [ "$i" -eq 8 ]
  then
   echo "good luck"
  else
    echo "Best School"
  fi
- (( countt++ ))
+ (( i + 1 ))
 done
+i=$i
