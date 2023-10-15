@@ -20,7 +20,7 @@ trap interrupt SIGINT
 echo $$ > /var/run/myscript.pid
 
 # Display a message indefinitely
-echo "To infinity and beyond indefinitely"
+echo "To infinity and beyond"
 while true; do
     sleep 1
 done
