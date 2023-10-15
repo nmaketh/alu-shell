@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Function to handle SIGTERM and SIGQUIT signals
+cleanup() {
+    echo "I hate the kill command"
+    rm -f /var/run/myscript.pid
+    exit
+}
+
+# Function to handle SIGINT signal
+interrupt() {
+    echo "Y U no love me?!"
+}
+
+# Trap signals
+trap cleanup SIGTERM SIGQUIT
+trap interrupt SIGINT
+
+# Get the current process ID and store it in a file
+echo $$ > /var/run/myscript.pid
+
+# Display a message indefinitely
+echo "To infinity and beyond indefinitely"
+while true; do
+    sleep 1
+done
+
